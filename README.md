@@ -4,6 +4,6 @@ Hi, I'm Mike, a software, economics and data science enthusiast with a passion f
 
 **Connect with me:**
 
-* [LinkedIn](https://www.linkedin.com/in/mikhail-kochetov/)
+* [LinkedIn](https://www.linkedin.com/in/kochetovmike/)
 * [GitHub](https://github.com/kochetovmike)
 * Instagram: [@kochetovmike](https://www.instagram.com/kochetovmike/)
