@@ -1,118 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikhail Kochetov</title>
-    <link rel="icon" href="/src/ava circle transparent.png" type="image/webicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Import Poppins font */
-    
-        body {
-            font-family: 'Poppins', sans-serif; /* MODIFIED FONT */
-            line-height: 1.6;
-            margin: 0;
-            background-color: #121212; /* MODIFIED COLOR */
-            color: #e0e0e0; /* MODIFIED COLOR */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-    
-        .container {
-            max-width: 700px;
-            width: 90%;
-            background-color: #1e1e1e; /* MODIFIED COLOR */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(128, 0, 128, 0.15); /* Adjusted shadow slightly for dark bg */
-            text-align: center;
-        }
-    
-        h1 {
-            font-family: 'Poppins', sans-serif; /* MODIFIED FONT */
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #ffffff; /* MODIFIED COLOR */
-            text-shadow: none;
-        }
-    
-        p {
-            margin-bottom: 20px;
-            color: #bdbdbd; /* MODIFIED COLOR */
-        }
-    
-        .social-links {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-    
-        .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            color: #bb86fc; /* MODIFIED COLOR */
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.0em;
-            transition: color 0.3s ease;
-        }
-    
-        .social-links a:hover {
-            color: #ffffff; /* MODIFIED COLOR */
-            text-shadow: none;
-        }
-    
-        .insta-tag {
-            color: #ab6dea; /* MODIFIED COLOR */
-        }
-    
-        /* Kept these styles as they were */
-        .container h2 {
-            text-align: center; /* Default was center, keeping it */
-            /* If you want H2 color changed: color: #ffffff; */
-        }
-    
-        .container ul {
-            list-style-type: disc;
-            text-align: left;
-            padding-left: 20px;
-            margin: 0;
-             /* If you want list bullet/text color changed: color: #bdbdbd; */
-        }
-    
-        .container li {
-            margin-bottom: 8px;
-            text-align: left;
-            /* If you want list item text color changed: color: #bdbdbd; */
-        }
-    
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mikhail Kochetov | kochetovmike</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    /* ===== Core Styles ===== */
+    body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #0a0a0a; /* deep black */
+        color: #e6e6e6; /* softer than pure white for classy look */
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Layout ===== */
+    header {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: auto;
+        text-align: left;
+        border-bottom: 1px solid #1f1f1f;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 0.2rem;
+        color: #ffffff;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #9e9e9e;
+        margin-bottom: 2rem;
+        max-width: 700px;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+        display: inline-block;
+        margin-right: 0.75rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 4px;
+        background-color: #1e3a5f; /* steel blue accent */
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background 0.25s ease;
+    }
+
+    .btn:hover {
+        background-color: #284c7a;
+    }
+
+    /* ===== Sections ===== */
+    section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 3rem 2rem;
+    }
+
+    .block {
+        padding: 1.5rem 2rem;
+        border-left: 3px solid #1e3a5f;
+        background-color: #111111;
+        margin-bottom: 2rem;
+    }
+
+    .block h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    /* ===== Lists ===== */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    ul li::before {
+        content: "> ";
+        color: #fff;
+        font-weight: italic;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 2rem;
+        color: #777;
+        border-top: 1px solid #1f1f1f;
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mikhail Kochetov</h1>
-        <p>Hi, I'm Mike, a software, economics, and data science enthusiast with a passion for technology and innovation. Originally from Belarus and currently residing in Austria. I always appreciate networking and learning about cool things happening across the world - let's connect!</p>
+<header>
+    <h1>Mikhail Kochetov</h1>
+    <h2>Building cool stuff for tomorrow!</h2>
+    <a href="https://github.com/kochetovmike" class="btn">GitHub</a>
+    <a href="https://linkedin.com/in/kochetovmike" class="btn">LinkedIn</a>
+    <a href="https://twitter.com/kochetovmike" class="btn">Twitter</a>
+</header>
 
-        <div class="social-links">
-            <a href="https://github.com/kochetovmike" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/mikhail-kochetov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/kochetovmike/" target="_blank" rel="noopener noreferrer" class="insta-tag">Instagram</a>
-        </div>
-
-        <div class="container">
-            <h2>About me</h2>
-            <ul>
-                <li>Professionally, on a mission to better connect business and technology.</li>
-                <li>Personally, addicted to good coffee (stonger = better!), hiking, and techno.</li>
-                <li>Passionate about solving problems and building cool things.</li>
-                <li>Always tinkering with new technologies, pushing my limits, rapid prototyping and creating something new.</li>
-                <li>Lifelong learner, always discovering new fundamental concepts/tools/frameworks.</li>
-            </ul>
-          </div>
+<section>
+    <div class="block">
+        <h3>About Me</h3>
+        <p>
+            I’m Mike — a software engineer with a background in business and economics. 
+            I work on projects that combine technical implementation with business context, drawing from experience in startups, consulting, and finance.
+        </p>
     </div>
+
+    <div class="block">
+        <h3>Highlights</h3>
+        <ul>
+            <li>Professionally, on a mission to better connect business and technology.</li>
+            <li>Personally, addicted to good coffee (stonger = better!), hiking, and techno.</li>
+            <li>Passionate about solving problems and building cool things.</li>
+            <li>Always tinkering with new technologies, pushing my limits, rapid prototyping and creating something new.</li>
+            <li>Lifelong learner, always discovering new fundamental concepts/tools/frameworks.</li>
+        </ul>
+    </div>
+<!-- 
+    <div class="block">
+        <h3>Currently Exploring</h3>
+        <ul>
+            <li>To be added.</li>
+
+        </ul>
+    </div> -->
+</section>
+
 </body>
 </html>
