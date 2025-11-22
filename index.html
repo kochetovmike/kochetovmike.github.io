@@ -109,6 +109,29 @@
         font-weight: italic;
     }
 
+    /* remove the leading "/ " for certification list items only */
+    .cert-list li::before { content: none; }
+
+    /* ===== Certifications dropdown ===== */
+    .cert-dropdown { margin-top: 1rem; }
+    /* .cert-toggle intentionally uses the shared .btn class so it matches other buttons */
+    /* make the cert toggle visually flat: no border, no shadow */
+    .cert-toggle { border: none; box-shadow: none; }
+    .cert-list, .cert-table { margin-top: 0.75rem; padding-left: 0; }
+
+    /* Table styles for certifications */
+    .cert-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .cert-table thead th { text-align: left; color: #cfcfcf; font-weight: 700; padding: 0.6rem 0.75rem; border-bottom: 1px solid #2e2e3a; }
+    .cert-table tbody td { padding: 0.6rem 0.75rem; border-bottom: 1px solid #26262b; color: #e6e6e6; }
+    .cert-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.01); }
+
+    .cert-table a { color: #9ec1e6; text-decoration: underline; }
+
+    /* legacy list-item styles (kept harmless) */
+    .cert-item { background: #191921; border: 1px solid #2e2e3a; padding: 1rem; border-radius: 6px; margin-bottom: 0.75rem; }
+    .cert-name { display: block; font-size: 1.05rem; color: #fff; margin-bottom: 0.25rem; }
+    .cert-meta { color: #cfcfcf; font-size: 0.95rem; }
+
     /* ===== Footer ===== */
     footer {
         text-align: center;
@@ -121,8 +144,9 @@
 </head>
 <body>
 <header>
-    <h1>Mikhail Kochetov</h1>
-    <h2>Building cool stuff for tomorrow!</h2>
+    <h1>Mikhail Kochetov</h1>   
+    <h2> </h2>
+    <!-- <h2>Building cool stuff for tomorrow!</h2> -->
     <a href="https://github.com/kochetovmike" class="btn" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/kochetovmike" class="btn" target="_blank">LinkedIn</a>
     <a href="https://www.instagram.com/kochetovmike/" class="btn" target="_blank">Instagram</a>
@@ -132,16 +156,14 @@
 <section>
     <div class="block">
         <h3>About Me</h3>
-        <p>
-            Hi, I'm Mike, a software, economics and data science enthusiast with a passion for technology and innovation. Originally from Belarus and currently residing in Austria. 
-            Always appreciate networking and cool things happening across the world - let's stay connected!
-        </p>
-    </div>
-
-    <div class="block">
-        <h3>Highlights</h3>
-        <ul>
-            <li>Professionally, on a mission to better connect business and technology.</li>
+                        <tr>
+                            <th>Name</th>
+                            <th>Provider</th>
+                            <th>Difficulty</th>
+                            <th>Valid from</th>
+                            <th>Valid to</th>
+                            <th>Link</th>
+                        </tr>
             <li>Personally, enjoy hiking/cycling/jogging, trying out new sorts of coffee, and photography (mostly architecture).</li>
             <li>Lifelong learner, open to discovering new fundamental concepts/tools/frameworks.</li>
         </ul>
@@ -156,7 +178,7 @@
     </div> -->
     <div class="block">
         <h3>Projects</h3>
-        <!-- <p>A selection of things I worked/am currently working on.</p> -->
+        <p>A selection of things I worked/am currently working on.</p>
         <br>
         <div class="block_inner">
             <h3>Aethelon</h3>
@@ -174,10 +196,77 @@
             <a href="https://kochetovmike.github.io/dsvisuals" class="btn" target="_blank">Data Structures Visual Tool</a>
         </div>
     </div>
+    <div class="block">
+        <h3>Miscellaneous</h3>
+        <p>Non-private information I keep here as a record for myself and others.</p>
+        <br>
+        <div class="block_inner">
+            <h3>Credentials</h3>
+            <p>A full list of my certifications & credentials.</p>
+            <!-- Certifications dropdown: can add more <li> entries inside the list -->
+            <div class="cert-dropdown">
+                <button class="cert-toggle btn" aria-expanded="false" aria-controls="cert-list">Show certifications</button>
+                <table id="cert-list" class="cert-table" hidden>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Provider</th>
+                            <th>Difficulty</th>
+                            <th>Valid From</th>
+                            <th>Valid To</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Microsoft Azure Fundamentals</td>
+                            <td>Microsoft</td>
+                            <td>Fundamental</td>
+                            <td>2024-04-25</td>
+                            <td>-</td>
+                            <td><a href="https://learn.microsoft.com/en-us/users/kochetovmike/credentials/certification/azure-fundamentals?tab=credentials-tab" target="_blank" rel="noopener">Microsoft Learn</a></td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Azure Data Fundamentals</td>
+                            <td>Microsoft</td>
+                            <td>Fundamental</td>
+                            <td>2024-05-03</td>
+                            <td>-</td>
+                            <td><a href="https://learn.microsoft.com/en-us/users/kochetovmike/credentials/certification/azure-data-fundamentals?tab=credentials-tab" target="_blank" rel="noopener">Microsoft Learn</a></td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
     &copy; 2025 Mikhail Kochetov. All rights reserved.
 </footer>
+<script>
+    // Certifications dropdown toggle
+    (function(){
+        var btn = document.querySelector('.cert-toggle');
+        var list = document.getElementById('cert-list');
+        if (!btn || !list) return;
+        function toggle(open){
+            var isOpen = typeof open === 'boolean' ? open : list.hasAttribute('hidden') === false;
+            if (isOpen) {
+                list.setAttribute('hidden', '');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.textContent = 'Show certifications';
+            } else {
+                list.removeAttribute('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.textContent = 'Hide certifications';
+            }
+        }
+        btn.addEventListener('click', function(){ toggle(); });
+        btn.addEventListener('keydown', function(e){
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+        });
+    })();
+</script>
 </body>
 </html>
