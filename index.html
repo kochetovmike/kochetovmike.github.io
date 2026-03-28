@@ -9,10 +9,15 @@
 
 <style>
     /* ===== Core Styles ===== */
+    html {
+        background: #0d1020;
+    }
+
     body {
         margin: 0;
         font-family: 'Helvetica', Sans-serif;
-        background: linear-gradient(160deg, #07090f 0%, #0b0e1d 40%, #100b1c 75%, #070910 100%) fixed;
+        background: linear-gradient(160deg, #0d1020 0%, #111630 45%, #130d22 80%, #0d1020 100%);
+        background-attachment: fixed;
         min-height: 100vh;
         color: #dde2f0;
         line-height: 1.6;
@@ -34,7 +39,7 @@
         position: absolute;
         bottom: -1px;
         left: 2rem;
-        width: 80px;
+        width: calc(100% - 4rem);
         height: 2px;
         background: linear-gradient(90deg, #3d6fb5, #8b3fc8);
         border-radius: 2px;
@@ -461,7 +466,8 @@
 </section>
 
 <footer>
-    &copy; 2025 Mikhail Kochetov. All rights reserved.
+    &copy; 2026 Mikhail Kochetov. All rights reserved.<br>
+    Mikhail Kochetov &mdash; GLN 9110038169912
 </footer>
 <script>
     // Certifications dropdown toggle
