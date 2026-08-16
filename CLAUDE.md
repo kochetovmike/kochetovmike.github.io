@@ -15,15 +15,14 @@ Personal static one-pager for Mikhail Kochetov. Hub linking social/professional 
 ## Structure
 
 - `index.html` — the entire site: markup, embedded `<style>` block, and inline `<script>` at the bottom
-- `src/` — images and favicon
-- `CNAME` — custom domain config (if applicable)
+- `src/` — images and favicon (site uses the default `kochetovmike.github.io` domain; no CNAME file)
 
 ## Content Sections (in order)
 
 1. Header — name, handle, social links (GitHub, LinkedIn, Instagram, X)
 2. About Me — short personal/professional bio
-3. Projects — Aethelon, AIM, One Page Apps (browsertools, dsvisuals)
-4. Miscellaneous → Credentials — expandable table of certifications (Microsoft, Google, Palantir, Appian, Bloomberg)
+3. Projects — Aethelon, AIM, One Page Apps (browsertools, dsvisuals, drawio), Global Shapers Vienna
+4. Credentials — expandable table of certifications (Microsoft, Google, Palantir, Appian, Bloomberg)
 5. Footer — copyright
 
 ## Editing Rules
