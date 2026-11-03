@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Michael Kochetov | kochetovmike</title>
 <link rel="icon" href="/src/avatar.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
     :root {
@@ -23,6 +26,8 @@
         --c-orange: #CA5010;
         --c-red: #E81123;
         --c-graphite: #4C4C4C;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
+        --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
     }
 
     * { box-sizing: border-box; }
@@ -34,7 +39,8 @@
 
     body {
         margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        font-feature-settings: 'cv11', 'ss01';
         background: var(--bg);
         min-height: 100vh;
         color: var(--text);
@@ -43,6 +49,10 @@
     }
 
     a { color: inherit; }
+
+    .nav-name, .section-title, .tile-title {
+        font-family: 'Space Grotesk', 'Inter', 'Segoe UI', system-ui, sans-serif;
+    }
 
     /* ===== Floating Nav ===== */
     .site-nav {
@@ -62,6 +72,7 @@
         background: var(--nav-bg);
         border: 1px solid #2b2b2b;
         border-radius: 0;
+        box-shadow: var(--shadow);
     }
 
     .nav-name {
@@ -125,7 +136,8 @@
         text-decoration: none;
         color: #fff;
         overflow: hidden;
-        transition: filter 0.15s ease, outline-color 0.15s ease;
+        box-shadow: var(--shadow);
+        transition: filter 0.15s ease, outline-color 0.15s ease, box-shadow 0.15s ease;
         outline: 2px solid transparent;
         outline-offset: -2px;
     }
@@ -138,6 +150,7 @@
     a.tile:focus-visible, button.tile:focus-visible {
         filter: brightness(1.12);
         outline-color: rgba(255, 255, 255, 0.65);
+        box-shadow: var(--shadow-hover);
     }
 
     a.tile:active, button.tile:active {
@@ -257,6 +270,7 @@
             display: block;
             margin-bottom: 0.85rem;
             border: 1px solid #2b2b2b;
+            box-shadow: var(--shadow);
             padding: 0.6rem 0.7rem 0.2rem;
         }
         .cert-table tbody td {
