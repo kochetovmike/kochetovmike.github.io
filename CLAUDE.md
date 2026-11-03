@@ -21,9 +21,10 @@ Personal static one-pager for Mikhail Kochetov. Hub linking social/professional 
 
 1. Header — name, handle, social links (GitHub, LinkedIn, Instagram, X)
 2. About Me — short personal/professional bio
-3. Projects — Aethelon, AIM, One Page Apps (browsertools, dsvisuals, drawio), Global Shapers Vienna
-4. Credentials — expandable table of certifications (Microsoft, Google, Palantir, Appian, Bloomberg)
-5. Footer — copyright
+3. Projects — AIM, Global Shapers Vienna (one row)
+4. Client-Side Apps — one tile per app (browsertools, browserboard, drawio, jspaint)
+5. Credentials — expandable table of certifications (Microsoft, Google, Palantir, Appian, Bloomberg)
+6. Footer — copyright
 
 ## Editing Rules
 
